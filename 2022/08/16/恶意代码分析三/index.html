@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"ustiniani.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="我喜欢看书，《活着》-余华，而这本书我之前就有耳闻，看它还是因为一个女孩在看，因她而起的兴致。她说这本书讲的是一个人一辈子经历的苦难，我想我看过一个人一段日子经历的苦难，那是《当幸福来敲门》。一辈子，时间好长啊，都刻在这本书的页距里，也将刻在我的脑海里。">
+  <meta name="description" content="静态分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="书评之《活着》">
-<meta property="og:url" content="https://ustiniani.github.io/2022/08/16/%E4%B9%A6%E8%AF%84%E4%B9%8B%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/index.html">
+<meta property="og:title" content="恶意代码分析三">
+<meta property="og:url" content="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/index.html">
 <meta property="og:site_name" content="随笔">
-<meta property="og:description" content="我喜欢看书，《活着》-余华，而这本书我之前就有耳闻，看它还是因为一个女孩在看，因她而起的兴致。她说这本书讲的是一个人一辈子经历的苦难，我想我看过一个人一段日子经历的苦难，那是《当幸福来敲门》。一辈子，时间好长啊，都刻在这本书的页距里，也将刻在我的脑海里。">
+<meta property="og:description" content="静态分析">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-16T07:23:49.000Z">
-<meta property="article:modified_time" content="2022-08-17T17:42:28.187Z">
+<meta property="article:published_time" content="2022-08-16T12:42:13.000Z">
+<meta property="article:modified_time" content="2022-08-16T12:44:52.739Z">
 <meta property="article:author" content="张三">
-<meta property="article:tag" content="书评">
+<meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://ustiniani.github.io/2022/08/16/%E4%B9%A6%E8%AF%84%E4%B9%8B%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/">
+<link rel="canonical" href="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>书评之《活着》 | 随笔</title>
+  <title>恶意代码分析三 | 随笔</title>
   
 
 
@@ -183,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ustiniani.github.io/2022/08/16/%E4%B9%A6%E8%AF%84%E4%B9%8B%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/">
+    <link itemprop="mainEntityOfPage" href="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -196,7 +196,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          书评之《活着》
+          恶意代码分析三
         </h1>
 
         <div class="post-meta">
@@ -206,23 +206,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-08-16 15:23:49" itemprop="dateCreated datePublished" datetime="2022-08-16T15:23:49+08:00">2022-08-16</time>
+              <time title="创建时间：2022-08-16 20:42:13 / 修改时间：20:44:52" itemprop="dateCreated datePublished" datetime="2022-08-16T20:42:13+08:00">2022-08-16</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-18 01:42:28" itemprop="dateModified" datetime="2022-08-18T01:42:28+08:00">2022-08-18</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%96%87%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">文学</span></a>
+                  <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url" rel="index"><span itemprop="name">逆向</span></a>
                 </span>
             </span>
 
@@ -237,24 +231,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>我喜欢看书，《活着》-余华，而这本书我之前就有耳闻，看它还是因为一个女孩在看，因她而起的兴致。她说这本书讲的是一个人一辈子经历的苦难，我想我看过一个人一段日子经历的苦难，那是《当幸福来敲门》。一辈子，时间好长啊，都刻在这本书的页距里，也将刻在我的脑海里。</p>
-</blockquote>
-<span id="more"></span>
-<hr>
-<blockquote>
-<p>摘抄自日文版自叙中的文字：</p>
-<p>作者身份议论主人公福贵的人生，被问及一个问题，“为什么您的小说《活着》在那样一种极端的环境中还要讲生活而不是幸存？生活和幸存之间轻微的分界在哪里？”</p>
-<p>作者的回答，“在中国，对于生活在社会底层的人来说，生活和幸存就是一枚分币的两面，它们之间轻微的分界在于方向的不同。对于《活着》而言，生活是一个人对自己经历的感受，而幸存往往是旁观者对别人经历的看法。《活着》中福贵虽然历经苦难，但是他是在讲述自己的故事。我用的是第一人称的叙述，福贵的讲述里不需要别人的看法，只需要他自己的感受，所以他讲述的是生活。如果用第三人称来叙述，如果有了旁人的看法，那么福贵在读者的眼中就会是一个苦难中的幸存者。”</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>《太平广记》中崔护和少女的故事<br>                                    去年今日此门中<br>                                    人面桃花相映红<br>                                    人面不知何处去<br>                                    桃花依旧笑春风<br>        故事说出了时间的意味深长。崔护和少女之间除了四目相视，没有其他任何交往，只是夜以继日的思念之情，在时间的节奏里各自流淌。在这里，时间隐藏了它的身份，可是又掌握着两个人的命运。我们的阅读无法抚摸它，也无法注视它，可我们又时刻感受到它的存在。就像寒冷的来到一样，我们不能注视也不能抚摸，我们只能浑身发抖地去感受。就这样什么话都不用说，什么行为都不用做，只要有一年的时间，也可以更短暂或者更漫长，崔护和少女玉洁冰清的恋情便会随风消散，便会“人面不知何处去”。类似的描述在我们的文学里随处可见，让时间中断流动的叙述，然后再从多年以后开始，这时候截然不同的情景不需要铺垫，也不需要解释就自然而然的出现了。在文学的叙述里，没有什么比时间更具有说服力了，因为时间无需通知我们就可以改变一切。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>那些生命中很重要的人，在身边的时候也不过淡淡的温暖，并不比一杯热茶显著，可一旦失去，整个世界瞬间荒芜。我们总是在战胜空间，却对时间无能为力。</p>
-</blockquote>
+        <h2 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h2><span id="more"></span>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gwind/p/8250842.html">https://www.cnblogs.com/gwind/p/8250842.html</a></p>
+<h2 id="IDA-IDC插件编写"><a href="#IDA-IDC插件编写" class="headerlink" title="IDA-IDC插件编写"></a>IDA-IDC插件编写</h2><p><a target="_blank" rel="noopener" href="https://www.jb51.net/softs/774812.html#downintro2">https://www.jb51.net/softs/774812.html#downintro2</a></p>
+<p>Resource Hacker</p>
+<h2 id="静态分析的结构与经验"><a href="#静态分析的结构与经验" class="headerlink" title="静态分析的结构与经验"></a>静态分析的结构与经验</h2><h3 id="1-分支结构"><a href="#1-分支结构" class="headerlink" title="1.分支结构"></a>1.分支结构</h3><p>jmp short</p>
+<p>不符合条件—》红色    符合条件—》绿色     default—》蓝色</p>
+<p>​    查看系统</p>
+<p>​    语言</p>
+<p>​    木马</p>
+<p>1.tcp、udp直接调用socket</p>
+<p>2.http(s)</p>
+<h3 id="2-网络结构"><a href="#2-网络结构" class="headerlink" title="2.网络结构"></a>2.网络结构</h3><p>​    socket—》wsa</p>
+<p>​    wsaData</p>
+<p>​    wsaStartUp</p>
+<p>流程：1.wsa相关    2.socket    3.connect    4.recv/send    5.closesocket    6.wsacleanup</p>
+<h3 id="3-文件结构"><a href="#3-文件结构" class="headerlink" title="3.文件结构"></a>3.文件结构</h3><p>恶意代码中    GetTickCount：80%确定目标的uid    被勒索的具体时间</p>
+<p>一、勒索文本的存放</p>
+<p>二、公有环境下存放一些敏感变量</p>
+<p>三、结果存放在网站上        pastebin（网址）</p>
+<p>​    1.释放文件    LoadResource    从资源文本中找到位置，创建文件</p>
+<p>​    2.从变量中释放</p>
+<p>​    3.从网络中释放文本</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">创建结构，下载内容</span><br><span class="line"><span class="number">1.</span>创建一个PE结构，但是没有内容</span><br><span class="line"><span class="number">2.</span>保存一下这个指针</span><br><span class="line"><span class="number">3.</span>recv之后（接收的就是meterpreter的文本内容</span><br><span class="line"><span class="number">4.</span>就可以选择创建文本还是直接在内存中运行</span><br></pre></td></tr></table></figure>
+<h3 id="4-加解密结构"><a href="#4-加解密结构" class="headerlink" title="4.加解密结构"></a>4.加解密结构</h3><p>1.微软自带的加解密</p>
+<p>2.自己写的加解密，但是有随机数的情况</p>
+<p>​            Crptrgraphy\DRM\RNG        注册表操作+带RNG这种字样</p>
+<p>3.自己写的加解密+自己的秘钥</p>
+<h2 id="OD操作"><a href="#OD操作" class="headerlink" title="OD操作"></a>OD操作</h2><h3 id="动态分析可以做的操作"><a href="#动态分析可以做的操作" class="headerlink" title="动态分析可以做的操作"></a>动态分析可以做的操作</h3><p>1.堆栈分析</p>
+<p>可以查看堆栈的值</p>
+<p>2.特顺的函数寻址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.L</span>oadLibrary</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>include&lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>getprocessaddress</span><br><span class="line">    </span><br><span class="line">    静态分析中都可以看得见</span><br><span class="line"></span><br><span class="line">hash	----》msf</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">syscalls</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">pe导入表</span><br><span class="line">getprocessaddress	直接看到的就是字符串，也就是函数名</span><br><span class="line">hash	我们可以把dll中的函数统一规划成一种<span class="number">16</span>进制格式，然后通过一些计算过程找到它</span><br><span class="line">    立即数---》地址---》函数名</span><br></pre></td></tr></table></figure>
+<p>哈希加载</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//www.cnblogs.com/bokernb/p/6407484.html</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -280,7 +289,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://ustiniani.github.io/2022/08/16/%E4%B9%A6%E8%AF%84%E4%B9%8B%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/" title="书评之《活着》">https://ustiniani.github.io/2022/08/16/书评之《活着》/</a>
+    <a href="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/" title="恶意代码分析三">https://ustiniani.github.io/2022/08/16/恶意代码分析三/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -292,7 +301,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E4%B9%A6%E8%AF%84/" rel="tag"># 书评</a>
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"># 网络安全</a>
           </div>
 
         
@@ -301,12 +310,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/08/14/%E5%90%89%E4%BB%96%E6%95%99%E5%AD%A6%E4%B9%8B%E4%B9%90%E7%90%86%E4%B8%80/" rel="prev" title="吉他教学之乐理一">
-      <i class="fa fa-chevron-left"></i> 吉他教学之乐理一
+    <a href="/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%BA%8C/" rel="prev" title="恶意代码分析二">
+      <i class="fa fa-chevron-left"></i> 恶意代码分析二
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%80/" rel="next" title="恶意代码分析一">
-      恶意代码分析一 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/09/03/%E5%BF%B5%E6%83%B3%E5%B0%8F%E4%BA%91%E4%B9%8B%E4%B8%80/" rel="next" title="念想小云之一">
+      念想小云之一 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -366,6 +375,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">静态分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDA-IDC%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99"><span class="nav-number">2.</span> <span class="nav-text">IDA-IDC插件编写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E7%BB%8F%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">静态分析的结构与经验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">1.分支结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">2.网络结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-number">3.3.</span> <span class="nav-text">3.文件结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%BB%93%E6%9E%84"><span class="nav-number">3.4.</span> <span class="nav-text">4.加解密结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OD%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">OD操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">4.1.</span> <span class="nav-text">动态分析可以做的操作</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
