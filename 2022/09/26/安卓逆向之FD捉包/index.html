@@ -225,14 +225,15 @@
 
       
         <h2 id="01-Fiddler联合雷电模拟器捉包"><a href="#01-Fiddler联合雷电模拟器捉包" class="headerlink" title="01-Fiddler联合雷电模拟器捉包"></a>01-Fiddler联合雷电模拟器捉包</h2><span id="more"></span>
+
 <blockquote>
 <p>1.将本地的IP和Fiddler的捉包端口作为雷电模拟器的代理服务器，这样模拟器实现了上网功能。</p>
 <p>2.将Fiddler的https证书导出，使用openssl的x509指令进行cer证书转pem证书和用MD5方式显示pem</p>
 <p>证书的hash值。</p>
-<p>—- 执行命令 openssl x509 -inform DER -in FiddlerRoot.cer -out cacert.pem</p>
-<p>—- 然后执行 openssl x509 -inform PEM -subject_hash_old -in cacert.pem</p>
+<p>— 执行命令 openssl x509 -inform DER -in FiddlerRoot.cer -out cacert.pem</p>
+<p>— 然后执行 openssl x509 -inform PEM -subject_hash_old -in cacert.pem</p>
 </blockquote>
-<p><img src="/images/15.png" alt=""></p>
+<p><img src="/images/15.png"></p>
 <blockquote>
 <p>把证书导入目录时，使用MT管理器，修改证书的读写权限，在复制到指定目录</p>
 <p>3.在本地环境，下载好adb（安卓调试桥），设置设备全局代理</p>

@@ -232,38 +232,52 @@
 
       
         <h2 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h2><span id="more"></span>
+
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gwind/p/8250842.html">https://www.cnblogs.com/gwind/p/8250842.html</a></p>
 <h2 id="IDA-IDC插件编写"><a href="#IDA-IDC插件编写" class="headerlink" title="IDA-IDC插件编写"></a>IDA-IDC插件编写</h2><p><a target="_blank" rel="noopener" href="https://www.jb51.net/softs/774812.html#downintro2">https://www.jb51.net/softs/774812.html#downintro2</a></p>
 <p>Resource Hacker</p>
 <h2 id="静态分析的结构与经验"><a href="#静态分析的结构与经验" class="headerlink" title="静态分析的结构与经验"></a>静态分析的结构与经验</h2><h3 id="1-分支结构"><a href="#1-分支结构" class="headerlink" title="1.分支结构"></a>1.分支结构</h3><p>jmp short</p>
-<p>不符合条件—》红色    符合条件—》绿色     default—》蓝色</p>
-<p>​    查看系统</p>
-<p>​    语言</p>
-<p>​    木马</p>
+<p>不符合条件–》红色	符合条件–》绿色 	default–》蓝色</p>
+<p>​	查看系统</p>
+<p>​	语言</p>
+<p>​	木马</p>
 <p>1.tcp、udp直接调用socket</p>
 <p>2.http(s)</p>
-<h3 id="2-网络结构"><a href="#2-网络结构" class="headerlink" title="2.网络结构"></a>2.网络结构</h3><p>​    socket—》wsa</p>
-<p>​    wsaData</p>
-<p>​    wsaStartUp</p>
-<p>流程：1.wsa相关    2.socket    3.connect    4.recv/send    5.closesocket    6.wsacleanup</p>
-<h3 id="3-文件结构"><a href="#3-文件结构" class="headerlink" title="3.文件结构"></a>3.文件结构</h3><p>恶意代码中    GetTickCount：80%确定目标的uid    被勒索的具体时间</p>
+<h3 id="2-网络结构"><a href="#2-网络结构" class="headerlink" title="2.网络结构"></a>2.网络结构</h3><p>​	socket–》wsa</p>
+<p>​	wsaData</p>
+<p>​	wsaStartUp</p>
+<p>流程：1.wsa相关	2.socket	3.connect	4.recv&#x2F;send	5.closesocket	6.wsacleanup</p>
+<h3 id="3-文件结构"><a href="#3-文件结构" class="headerlink" title="3.文件结构"></a>3.文件结构</h3><p>恶意代码中	GetTickCount：80%确定目标的uid	被勒索的具体时间</p>
 <p>一、勒索文本的存放</p>
 <p>二、公有环境下存放一些敏感变量</p>
-<p>三、结果存放在网站上        pastebin（网址）</p>
-<p>​    1.释放文件    LoadResource    从资源文本中找到位置，创建文件</p>
-<p>​    2.从变量中释放</p>
-<p>​    3.从网络中释放文本</p>
+<p>三、结果存放在网站上		pastebin（网址）</p>
+<p>​	1.释放文件	LoadResource	从资源文本中找到位置，创建文件</p>
+<p>​	2.从变量中释放</p>
+<p>​	3.从网络中释放文本</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">创建结构，下载内容</span><br><span class="line"><span class="number">1.</span>创建一个PE结构，但是没有内容</span><br><span class="line"><span class="number">2.</span>保存一下这个指针</span><br><span class="line"><span class="number">3.</span>recv之后（接收的就是meterpreter的文本内容</span><br><span class="line"><span class="number">4.</span>就可以选择创建文本还是直接在内存中运行</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="4-加解密结构"><a href="#4-加解密结构" class="headerlink" title="4.加解密结构"></a>4.加解密结构</h3><p>1.微软自带的加解密</p>
 <p>2.自己写的加解密，但是有随机数的情况</p>
-<p>​            Crptrgraphy\DRM\RNG        注册表操作+带RNG这种字样</p>
+<p>​			Crptrgraphy\DRM\RNG		注册表操作+带RNG这种字样</p>
 <p>3.自己写的加解密+自己的秘钥</p>
 <h2 id="OD操作"><a href="#OD操作" class="headerlink" title="OD操作"></a>OD操作</h2><h3 id="动态分析可以做的操作"><a href="#动态分析可以做的操作" class="headerlink" title="动态分析可以做的操作"></a>动态分析可以做的操作</h3><p>1.堆栈分析</p>
 <p>可以查看堆栈的值</p>
 <p>2.特顺的函数寻址</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.L</span>oadLibrary</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>include&lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>getprocessaddress</span><br><span class="line">    </span><br><span class="line">    静态分析中都可以看得见</span><br><span class="line"></span><br><span class="line">hash	----》msf</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">syscalls</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">pe导入表</span><br><span class="line">getprocessaddress	直接看到的就是字符串，也就是函数名</span><br><span class="line">hash	我们可以把dll中的函数统一规划成一种<span class="number">16</span>进制格式，然后通过一些计算过程找到它</span><br><span class="line">    立即数---》地址---》函数名</span><br></pre></td></tr></table></figure>
+
+
+
 <p>哈希加载</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//www.cnblogs.com/bokernb/p/6407484.html</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
     </div>
 
