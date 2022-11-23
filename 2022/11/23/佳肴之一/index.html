@@ -22,20 +22,25 @@
     var CONFIG = {"hostname":"ustiniani.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="静态分析">
+  <meta name="description" content="菜式做法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="恶意代码分析三">
-<meta property="og:url" content="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/index.html">
+<meta property="og:title" content="佳肴之一">
+<meta property="og:url" content="https://ustiniani.github.io/2022/11/23/%E4%BD%B3%E8%82%B4%E4%B9%8B%E4%B8%80/index.html">
 <meta property="og:site_name" content="随笔">
-<meta property="og:description" content="静态分析">
+<meta property="og:description" content="菜式做法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-16T12:42:13.000Z">
-<meta property="article:modified_time" content="2022-08-16T12:44:52.739Z">
+<meta property="og:image" content="https://ustiniani.github.io/images/32.jpg">
+<meta property="og:image" content="https://ustiniani.github.io/images/33.jpg">
+<meta property="og:image" content="https://ustiniani.github.io/images/34.jpg">
+<meta property="og:image" content="https://ustiniani.github.io/images/35.jpg">
+<meta property="article:published_time" content="2022-11-23T12:27:34.000Z">
+<meta property="article:modified_time" content="2022-11-23T12:56:41.209Z">
 <meta property="article:author" content="张三">
-<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="美食">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ustiniani.github.io/images/32.jpg">
 
-<link rel="canonical" href="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/">
+<link rel="canonical" href="https://ustiniani.github.io/2022/11/23/%E4%BD%B3%E8%82%B4%E4%B9%8B%E4%B8%80/">
 
 
 <script id="page-configurations">
@@ -48,7 +53,7 @@
   };
 </script>
 
-  <title>恶意代码分析三 | 随笔</title>
+  <title>佳肴之一 | 随笔</title>
   
 
 
@@ -183,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/">
+    <link itemprop="mainEntityOfPage" href="https://ustiniani.github.io/2022/11/23/%E4%BD%B3%E8%82%B4%E4%B9%8B%E4%B8%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -196,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          恶意代码分析三
+          佳肴之一
         </h1>
 
         <div class="post-meta">
@@ -208,16 +213,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-08-16 20:42:13 / 修改时间：20:44:52" itemprop="dateCreated datePublished" datetime="2022-08-16T20:42:13+08:00">2022-08-16</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url" rel="index"><span itemprop="name">逆向</span></a>
-                </span>
+              <time title="创建时间：2022-11-23 20:27:34 / 修改时间：20:56:41" itemprop="dateCreated datePublished" datetime="2022-11-23T20:27:34+08:00">2022-11-23</time>
             </span>
 
           
@@ -231,39 +227,74 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h2><span id="more"></span>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gwind/p/8250842.html">https://www.cnblogs.com/gwind/p/8250842.html</a></p>
-<h2 id="IDA-IDC插件编写"><a href="#IDA-IDC插件编写" class="headerlink" title="IDA-IDC插件编写"></a>IDA-IDC插件编写</h2><p><a target="_blank" rel="noopener" href="https://www.jb51.net/softs/774812.html#downintro2">https://www.jb51.net/softs/774812.html#downintro2</a></p>
-<p>Resource Hacker</p>
-<h2 id="静态分析的结构与经验"><a href="#静态分析的结构与经验" class="headerlink" title="静态分析的结构与经验"></a>静态分析的结构与经验</h2><h3 id="1-分支结构"><a href="#1-分支结构" class="headerlink" title="1.分支结构"></a>1.分支结构</h3><p>jmp short</p>
-<p>不符合条件—》红色    符合条件—》绿色     default—》蓝色</p>
-<p>​    查看系统</p>
-<p>​    语言</p>
-<p>​    木马</p>
-<p>1.tcp、udp直接调用socket</p>
-<p>2.http(s)</p>
-<h3 id="2-网络结构"><a href="#2-网络结构" class="headerlink" title="2.网络结构"></a>2.网络结构</h3><p>​    socket—》wsa</p>
-<p>​    wsaData</p>
-<p>​    wsaStartUp</p>
-<p>流程：1.wsa相关    2.socket    3.connect    4.recv/send    5.closesocket    6.wsacleanup</p>
-<h3 id="3-文件结构"><a href="#3-文件结构" class="headerlink" title="3.文件结构"></a>3.文件结构</h3><p>恶意代码中    GetTickCount：80%确定目标的uid    被勒索的具体时间</p>
-<p>一、勒索文本的存放</p>
-<p>二、公有环境下存放一些敏感变量</p>
-<p>三、结果存放在网站上        pastebin（网址）</p>
-<p>​    1.释放文件    LoadResource    从资源文本中找到位置，创建文件</p>
-<p>​    2.从变量中释放</p>
-<p>​    3.从网络中释放文本</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">创建结构，下载内容</span><br><span class="line"><span class="number">1.</span>创建一个PE结构，但是没有内容</span><br><span class="line"><span class="number">2.</span>保存一下这个指针</span><br><span class="line"><span class="number">3.</span>recv之后（接收的就是meterpreter的文本内容</span><br><span class="line"><span class="number">4.</span>就可以选择创建文本还是直接在内存中运行</span><br></pre></td></tr></table></figure>
-<h3 id="4-加解密结构"><a href="#4-加解密结构" class="headerlink" title="4.加解密结构"></a>4.加解密结构</h3><p>1.微软自带的加解密</p>
-<p>2.自己写的加解密，但是有随机数的情况</p>
-<p>​            Crptrgraphy\DRM\RNG        注册表操作+带RNG这种字样</p>
-<p>3.自己写的加解密+自己的秘钥</p>
-<h2 id="OD操作"><a href="#OD操作" class="headerlink" title="OD操作"></a>OD操作</h2><h3 id="动态分析可以做的操作"><a href="#动态分析可以做的操作" class="headerlink" title="动态分析可以做的操作"></a>动态分析可以做的操作</h3><p>1.堆栈分析</p>
-<p>可以查看堆栈的值</p>
-<p>2.特顺的函数寻址</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.L</span>oadLibrary</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>include&lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>getprocessaddress</span><br><span class="line">    </span><br><span class="line">    静态分析中都可以看得见</span><br><span class="line"></span><br><span class="line">hash	----》msf</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">syscalls</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">pe导入表</span><br><span class="line">getprocessaddress	直接看到的就是字符串，也就是函数名</span><br><span class="line">hash	我们可以把dll中的函数统一规划成一种<span class="number">16</span>进制格式，然后通过一些计算过程找到它</span><br><span class="line">    立即数---》地址---》函数名</span><br></pre></td></tr></table></figure>
-<p>哈希加载</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//www.cnblogs.com/bokernb/p/6407484.html</span></span><br></pre></td></tr></table></figure>
+        <h1 id="菜式做法"><a href="#菜式做法" class="headerlink" title="菜式做法"></a>菜式做法</h1><span id="more"></span>
+<h2 id="1、水饺"><a href="#1、水饺" class="headerlink" title="1、水饺"></a>1、水饺</h2><p><img src="/images/32.jpg" alt=""></p>
+<blockquote>
+<p>主料：肉馅一斤、面粉一斤</p>
+<p>辅料：小白菜一斤</p>
+<p>配料：葱适量、姜适量</p>
+</blockquote>
+<p><strong>步骤如下：</strong></p>
+<ol>
+<li><strong>和面，面中加入冷水和成面团，醒一会儿。</strong></li>
+<li><strong>和馅，加入葱姜碎、盐、鸡精、生抽、南德调料少许把肉煨好。</strong></li>
+<li><strong>将小白菜洗净燎好。</strong></li>
+<li><strong>小白菜切碎放入煨好的肉馅中。</strong></li>
+<li><strong>搅拌均匀，调好饺子馅。</strong></li>
+<li><strong>和好的面分成几块，揉搓成条状。</strong></li>
+<li><strong>切成记子，擀好皮。</strong></li>
+<li><strong>放入拌好的馅，包成饺子。</strong></li>
+<li><strong>煮饺子，水开后下入饺子，再开后加一碗凉水，如此重复3次，叫“三开”，饺子就好啦！</strong></li>
+</ol>
+<h2 id="2、拍滚莲藕花生汤"><a href="#2、拍滚莲藕花生汤" class="headerlink" title="2、拍滚莲藕花生汤"></a>2、拍滚莲藕花生汤</h2><p><img src="/images/33.jpg" alt=""></p>
+<blockquote>
+<p>主料：大骨适量、花生适量、红枣适量、莲藕适量</p>
+<p>辅料：耗干适量、枸杞适量、吊片适量</p>
+</blockquote>
+<p><strong>步骤如下:</strong></p>
+<ol>
+<li><strong>原料：大骨,莲藕,红枣,花生,,蚝干,吊片,枸杞。</strong></li>
+<li><strong>大骨洗净，首先大骨烧开飞水，捞出沥干，备用。</strong></li>
+<li><strong>锅加水烧开加入花生，蚝干，红枣，枸杞及吊片，焖约10分钟。</strong></li>
+<li><strong>莲藕刮去外面的表皮切块。加入藕片煲10分钟。</strong></li>
+<li><strong>加入排骨再煲10分钟。</strong></li>
+<li><strong>煮滚后，把所有汤料转移电子砂煲熬上两个小时左右。</strong></li>
+<li><strong>加适量盐、鸡精调味，再熬一个小时左右即可</strong></li>
+</ol>
+<h2 id="3、客家酿豆腐"><a href="#3、客家酿豆腐" class="headerlink" title="3、客家酿豆腐"></a>3、客家酿豆腐</h2><p><img src="/images/34.jpg" alt=""></p>
+<blockquote>
+<p>主料：北豆腐一块、肉馅50克、干香菇4朵</p>
+<p>辅料：葱2根、蒜2瓣、盐适量、油适量、胡椒粉适量、料酒适量、生抽适量、耗油适量、水淀粉适量、红椒丁适量</p>
+</blockquote>
+<p><strong>步骤如下：</strong></p>
+<ol>
+<li><strong>准备好材料；</strong></li>
+<li><strong>干香菇温水泡发；</strong></li>
+<li><strong>豆腐用淡盐水浸泡一会儿；</strong></li>
+<li><strong>香菇洗净剁成末加入肉馅中，再加适量盐、生抽、胡椒粉拌匀；</strong></li>
+<li><strong>北豆腐切方块，用挖球器挖去中间的豆腐;</strong></li>
+<li><strong>填入肉馅，稍微压下防止肉馅散开，平豆腐即可;</strong></li>
+<li><strong>锅中加点油烧热，豆腐的肉馅一面先入锅煎至定型微黄；</strong></li>
+<li><strong>再翻面煎至底部微黄；</strong></li>
+<li><strong>转入砂锅中；</strong></li>
+<li><strong>另起锅爆香葱蒜末，加适量水，加1汤匙蚝油少许烧开；</strong></li>
+<li><strong>倒入砂锅煲中，小火煲10分钟收浓汁；</strong></li>
+<li><strong>淋入水淀粉适量和香油，洒上葱末和红椒丁即可</strong></li>
+</ol>
+<h2 id="4、蜜汁叉烧肉"><a href="#4、蜜汁叉烧肉" class="headerlink" title="4、蜜汁叉烧肉"></a>4、蜜汁叉烧肉</h2><p><img src="/images/35.jpg" alt=""></p>
+<blockquote>
+<p>主料：猪梅花肉500克</p>
+<p>辅料：叉烧酱2大勺</p>
+<p>配料：生抽1大勺、老抽1小勺、白糖1大勺、料酒1小勺、盐少许、蜂蜜适量、清水适量</p>
+</blockquote>
+<ol>
+<li><strong>猪肉洗净，修成大块儿扁长条形（也可以切厚片或小块儿，随自己喜欢；大块儿肉烤的时间长一些，小块儿或厚片肉烤的时间短一些，自己掌握）；</strong></li>
+<li><strong>所有腌料叉烧酱2大勺，生抽1大勺，老抽1小勺，白糖1大勺，料酒1小勺，盐少许（可不放盐或多放点儿生抽）放进小碗，搅拌拌匀；</strong></li>
+<li><strong>将猪肉和腌料一起放进能密封的容器，抓揉片刻，使猪肉均匀沾裹腌料，密封放进冰箱腌制过夜，中间拿出来翻几次面；</strong></li>
+<li><strong>腌好的猪肉放进烤盘（最好是这种带格架的烤肉盘，烤制过程中油脂可以直接滴进烤架底下的接油盘。如果没有可以将肉放在烤架上，烤架下面再放一个烤盘接油，以方便清洗）；烤箱200度预热5分钟后，放入猪肉，烤大约30—40分钟，至肉熟；</strong></li>
+<li><strong>中间打开烤箱，用蜂蜜水（蜂蜜：水=1:1）刷面三次，并视烤箱状况给肉肉翻面。（有的烤箱有风热功能或专门的烤肉功能，不用翻面也可以烤得很均匀；也可以不用蜂蜜水，用剩余的腌料刷面，味道、颜色略逊）；</strong></li>
+<li><strong>取出烤好的叉烧，略放凉后切件装盘。</strong></li>
+</ol>
 
     </div>
 
@@ -289,7 +320,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://ustiniani.github.io/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89/" title="恶意代码分析三">https://ustiniani.github.io/2022/08/16/恶意代码分析三/</a>
+    <a href="https://ustiniani.github.io/2022/11/23/%E4%BD%B3%E8%82%B4%E4%B9%8B%E4%B8%80/" title="佳肴之一">https://ustiniani.github.io/2022/11/23/佳肴之一/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -301,7 +332,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"># 网络安全</a>
+              <a href="/tags/%E7%BE%8E%E9%A3%9F/" rel="tag"># 美食</a>
           </div>
 
         
@@ -310,13 +341,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/08/16/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E4%BA%8C/" rel="prev" title="恶意代码分析二">
-      <i class="fa fa-chevron-left"></i> 恶意代码分析二
+    <a href="/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" rel="prev" title="安卓逆向之apk文件结构">
+      <i class="fa fa-chevron-left"></i> 安卓逆向之apk文件结构
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/09/03/%E5%BF%B5%E6%83%B3%E5%B0%8F%E4%BA%91%E4%B9%8B%E4%B8%80/" rel="next" title="念想小云之一">
-      念想小云之一 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -375,7 +403,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">静态分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDA-IDC%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99"><span class="nav-number">2.</span> <span class="nav-text">IDA-IDC插件编写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E7%BB%8F%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">静态分析的结构与经验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">1.分支结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">2.网络结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-number">3.3.</span> <span class="nav-text">3.文件结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%BB%93%E6%9E%84"><span class="nav-number">3.4.</span> <span class="nav-text">4.加解密结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OD%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">OD操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">4.1.</span> <span class="nav-text">动态分析可以做的操作</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8F%9C%E5%BC%8F%E5%81%9A%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">菜式做法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%B0%B4%E9%A5%BA"><span class="nav-number">1.1.</span> <span class="nav-text">1、水饺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%8B%8D%E6%BB%9A%E8%8E%B2%E8%97%95%E8%8A%B1%E7%94%9F%E6%B1%A4"><span class="nav-number">1.2.</span> <span class="nav-text">2、拍滚莲藕花生汤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%AE%A2%E5%AE%B6%E9%85%BF%E8%B1%86%E8%85%90"><span class="nav-number">1.3.</span> <span class="nav-text">3、客家酿豆腐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E8%9C%9C%E6%B1%81%E5%8F%89%E7%83%A7%E8%82%89"><span class="nav-number">1.4.</span> <span class="nav-text">4、蜜汁叉烧肉</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

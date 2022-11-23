@@ -29,19 +29,19 @@
 <meta property="og:site_name" content="随笔">
 <meta property="og:description" content="Android逆向基础知识之：apk目录文件结构">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ustiniani.github.io/images/25.png">
-<meta property="og:image" content="https://ustiniani.github.io/images/26.png">
-<meta property="og:image" content="https://ustiniani.github.io/images/27.png">
-<meta property="og:image" content="https://ustiniani.github.io/images/28.png">
-<meta property="og:image" content="https://ustiniani.github.io/images/29.png">
-<meta property="og:image" content="https://ustiniani.github.io/images/30.png">
-<meta property="og:image" content="https://ustiniani.github.io/images/31.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/25.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/26.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/27.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/28.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/29.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/30.png">
+<meta property="og:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/31.png">
 <meta property="article:published_time" content="2022-11-06T09:48:49.000Z">
 <meta property="article:modified_time" content="2022-11-06T17:32:21.743Z">
 <meta property="article:author" content="张三">
 <meta property="article:tag" content="安卓逆向">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ustiniani.github.io/images/25.png">
+<meta name="twitter:image" content="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/images/25.png">
 
 <link rel="canonical" href="https://ustiniani.github.io/2022/11/06/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E4%B9%8Bapk%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
 
@@ -237,15 +237,16 @@
 
       
         <h2 id="Android逆向基础知识之：apk目录文件结构"><a href="#Android逆向基础知识之：apk目录文件结构" class="headerlink" title="Android逆向基础知识之：apk目录文件结构"></a>Android逆向基础知识之：apk目录文件结构</h2><span id="more"></span>
-
-<h3 id="解压后的安卓目录"><a href="#解压后的安卓目录" class="headerlink" title="解压后的安卓目录"></a>解压后的安卓目录</h3><table>
+<h3 id="解压后的安卓目录"><a href="#解压后的安卓目录" class="headerlink" title="解压后的安卓目录"></a>解压后的安卓目录</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>目录名</th>
 <th>逆向作用</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>assets</strong></td>
 <td>资源文件(图片、音频、数据库、网页、配置文件等)，这个文件夹下不会被编译。</td>
 </tr>
@@ -255,7 +256,7 @@
 </tr>
 <tr>
 <td><strong>lib</strong></td>
-<td>.so库，系统库，自己打包的库。有的把加密&#x2F;token生成方式放在.so文件里</td>
+<td>.so库，系统库，自己打包的库。有的把加密/token生成方式放在.so文件里</td>
 </tr>
 <tr>
 <td><strong>libs</strong></td>
@@ -277,9 +278,11 @@
 <td><strong>classes.dex</strong></td>
 <td>源代码，虚拟机可执行文件</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="assets目录"><a href="#assets目录" class="headerlink" title="assets目录"></a>assets目录</h3><p>存放需要打包到APK的静态文件，该目录与res目录不同之处在于,assets目录支持任意深度的子目录，我们的开发者可以根据自己的需求来任意部署文件夹的架构，而且res目录下的文件会在.R文件中生成与其对应的资源ID，，assets不会自动生成对应的id，访问的时候需要AssetManager类，</p>
-<h3 id="Lib目录"><a href="#Lib目录" class="headerlink" title="Lib目录"></a>Lib目录</h3><p>该目录用来存放应用程序所依赖的native库文件，native库一般是用C&#x2F;C++进行编写的，这里的lib库可能包含4种不同类型，根据CPU型号的不同，我们大体可以分为ARM，ARM-v7a，MIPS，X86，分别对应着ARM架构，ARM-V7架构，MIPS架构和X86架构，这些so库在apk包中构成如下图：</p>
+<h3 id="Lib目录"><a href="#Lib目录" class="headerlink" title="Lib目录"></a>Lib目录</h3><p>该目录用来存放应用程序所依赖的native库文件，native库一般是用C/C++进行编写的，这里的lib库可能包含4种不同类型，根据CPU型号的不同，我们大体可以分为ARM，ARM-v7a，MIPS，X86，分别对应着ARM架构，ARM-V7架构，MIPS架构和X86架构，这些so库在apk包中构成如下图：</p>
 <p>其中，不同的CPU架构对应着不同的目录，每个目录中可以存放非常多的对应版本的so库，而且这个目录的结构固定，用户只能按照这个目录来存放自己的so库。目前市场上使用的移动终端大多是基于ARM或者ARM-v7a架构的。从厂家上来分是有三种，arm，x86，MIPS，arm 系列是绝大多数手机上使用的，x86 主要是运用在平板上，而 MIPS ，我基本上就没见过。</p>
 <h3 id="Res目录"><a href="#Res目录" class="headerlink" title="Res目录"></a>Res目录</h3><p>res是resource的缩写，这个目录存放的东西是资源文件，存放这个文件夹下的所有文件都会和上文所说的，映射到Android工程中的.R文件中，生成对应的资源ID，访问的时候直接使用资源ID，即R.ID.FILENAME，res文件夹下可以包含多个文件夹；anim是存放动画文件的；drawable目录存放图形资源；layout目录存放布局文件；values目录存放一些特征值；colors.xml存放color的颜色值等等</p>
 <h3 id="META-INF目录"><a href="#META-INF目录" class="headerlink" title="META-INF目录"></a>META-INF目录</h3><p>保存应用程序的签名信息，签名信息可以验证APK文件的完整性。当AndroidSDK在打包APK文件时会计算APK包中的所有文件信息的完整性，并且把这些完整性保存到META-INF文件夹下，应用程序在安装的时候首先会更具META-INF文件夹教研APK的完整性。通过这种手段，我们就可以在一定程度上保证APK中的每一个文件不被篡改。以此来确保我们的APK应用程序不被恶意修改或者被病毒文件感染，这有利于确保Android应用的完整性和系统的安全性。META-INF目录中包含的文件有CERT.RSA，CERT.DSA，CERT.SF和MANIFEST.MF。其中CERT.RSA是开发者利用私钥对APK进行签名的签名文件，CERT.SF和MANIFEST.MF记录了文件中文件的SHA-1哈希值。</p>
@@ -287,66 +290,66 @@
 <h3 id="classes-dex"><a href="#classes-dex" class="headerlink" title="classes.dex"></a>classes.dex</h3><p>传统的Java程序，首先先把文件编译成class文件，字节码都保存在了class文件中，Java虚拟机可以通过解释且执行这些class文件。然而Dalvik虚拟机是在Java虚拟机进行了优化，执行的是Dalvik字节码，而这些Dalvik字节码就是由Java字节码转换而来的。一般来说，Android应用在打包的时候通过AndroidSDK中的dx工具将Java字节码转换为Dalvik字节码。Dx工具可以对多个class文件进行合并，重组和优化，通过这些操作，可以达到减小体积，缩短运行时间的目的。</p>
 <h3 id="Resources-arsc"><a href="#Resources-arsc" class="headerlink" title="Resources.arsc"></a>Resources.arsc</h3><p>用来记录资源文件和资源ID之间的映射关系，用来根据资源ID寻找资源。Android的开发是分模块的，res目录专门用来存放资源文件，当在代码中需要调用资源文件时，只需要调用方法“findviewbyid()”就可以得到资源文件，每当在res文件夹下放一个文件，aapt就会自动生成对应的ID保存在.R文件，我们调用这个ID就可以，但是只有这个ID还不够，.R文件只是保证编译程序不报错，实际上在程序运行时，系统要根据ID去寻找对应的资源路径，而resources.arsc文件就是用来记录这些ID和资源文件位置对应关系的文件。</p>
 <h2 id="Android完整打包流程"><a href="#Android完整打包流程" class="headerlink" title="Android完整打包流程"></a>Android完整打包流程</h2><p><strong>aapt阶段</strong>：aapt工具编译res资源文件，把大部分xml文件编译成二进制文件（图片文件除外），同时生成R.Java文件和resources.arsc文件，里面保存了资源的ID和在APK中的路径。<br><strong>aidl阶段</strong>：如果项目中有使用AIDL，那么就会把.aidl文件编译成.java文件。<br><strong>javaCompiler阶段</strong>：将所有.java文件(包括R文件和AIDL生成的.java文件)，通过javac工具生成class文件。<br><strong>dex阶段</strong>：将生成的.class文件和第三方库的.class文件通过dx工具生成classes.dex文件(如果有分包，那么可能有多个)。<br><strong>apkBuilder阶段</strong>：aapt阶段中的资源文件、dex文件和第三方的非java资源包(.so)，通过apkbuilder工具生成未签名的apk包。<br><strong>jarSigner阶段</strong>：签名，jarsigner工具，如果是debug模式用默认签名，release模式用开发者的签名。<br><strong>zipAligin阶段</strong>：对齐，通过zipalign工具对apk中的未压缩资源（图片、视频）进行“对齐操作”，让资源按4字节的边界进行对齐，使得资源访问速度更快。</p>
-<p><img src="/images/25.png"></p>
-<p><img src="/images/26.png"></p>
-<h3 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h3><h3 id="1-aapt阶段"><a href="#1-aapt阶段" class="headerlink" title="1.aapt阶段"></a>1.aapt阶段</h3><p>aapt.exe工具（The Android Asset Packaing Tool），位于android-sdk&#x2F;platform-tools目录下。</p>
+<p><img src="images/25.png" alt=""></p>
+<p><img src="images/26.png" alt=""></p>
+<h3 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h3><h3 id="1-aapt阶段"><a href="#1-aapt阶段" class="headerlink" title="1.aapt阶段"></a>1.aapt阶段</h3><p>aapt.exe工具（The Android Asset Packaing Tool），位于android-sdk/platform-tools目录下。</p>
 <ol>
-<li>使用aapt来打包res资源文件，生成 R.java、resources.arsc和 res文件，res文件分为 二进制 和 非二进制 文件，典型的非二进制文件如：res&#x2F;raw和图片，它们保持原样，不被编译。</li>
+<li>使用aapt来打包res资源文件，生成 R.java、resources.arsc和 res文件，res文件分为 二进制 和 非二进制 文件，典型的非二进制文件如：res/raw和图片，它们保持原样，不被编译。</li>
 <li>res目录有9种目录，如下：</li>
 </ol>
 <ul>
-<li>animator ：这类资源以XML文件保存在res&#x2F;animator目录下，用来描述属性动画。</li>
-<li>anim：这类资源以XML文件保存在res&#x2F;anim目录下，用来描述补间动画。</li>
-<li>color：这类资源以XML文件保存在res&#x2F;color目录下，用描述对象颜色状态选择。</li>
-<li>drawable：这类资源以XML或者Bitmap文件保存在res&#x2F;drawable目录下，用来描述可绘制对象。例如，我们可以在里面放置一些图片（.png, .9.png, .jpg, .gif），来作为程序界面视图的背景图。注意，保存在这个目录中的Bitmap文件在打包的过程中，可能会被优化的。例如，一个不需要多于256色的真彩色PNG文件可能会被转换成一个只有8位调色板的PNG面板，这样就可以无损地压缩图片，以减少图片所占用的内存资源。</li>
-<li>layout：这类资源以XML文件保存在res&#x2F;layout目录下，用来描述应用程序界面布局。</li>
-<li>menu：这类资源以XML文件保存在res&#x2F;menu目录下，用来描述应用程序菜单。</li>
-<li>raw：这类资源以任意格式的文件保存在res&#x2F;raw目录下，它们和assets类资源一样，都是原装不动地打包在apk文件中的，不过它们会被赋予资源ID，这样我们就可以在程序中通过ID来访问它们。例如，假设在res&#x2F;raw目录下有一个名称为filename的文件，并且它在编译的过程，被赋予的资源ID为R.raw.filename，那么就可以使用以下代码来访问它：Resources res &#x3D; getResources(); InputStream is &#x3D; res .openRawResource(R.raw.filename);</li>
-<li>values：这类资源以XML文件保存在res&#x2F;values目录下，用来描述一些简单值，例如，数组、颜色、尺寸、字符串和样式值等，一般来说，这六种不同的值分别保存在名称为arrays.xml、colors.xml、dimens.xml、strings.xml和styles.xml文件中。</li>
-<li>xml：这类资源以XML文件保存在res&#x2F;xml目录下，一般就是用来描述应用程序的配置信息。<br>R.java 文件<br>R.java 文件是自动生成的，如下：</li>
+<li>animator ：这类资源以XML文件保存在res/animator目录下，用来描述属性动画。</li>
+<li>anim：这类资源以XML文件保存在res/anim目录下，用来描述补间动画。</li>
+<li>color：这类资源以XML文件保存在res/color目录下，用描述对象颜色状态选择。</li>
+<li>drawable：这类资源以XML或者Bitmap文件保存在res/drawable目录下，用来描述可绘制对象。例如，我们可以在里面放置一些图片（.png, .9.png, .jpg, .gif），来作为程序界面视图的背景图。注意，保存在这个目录中的Bitmap文件在打包的过程中，可能会被优化的。例如，一个不需要多于256色的真彩色PNG文件可能会被转换成一个只有8位调色板的PNG面板，这样就可以无损地压缩图片，以减少图片所占用的内存资源。</li>
+<li>layout：这类资源以XML文件保存在res/layout目录下，用来描述应用程序界面布局。</li>
+<li>menu：这类资源以XML文件保存在res/menu目录下，用来描述应用程序菜单。</li>
+<li>raw：这类资源以任意格式的文件保存在res/raw目录下，它们和assets类资源一样，都是原装不动地打包在apk文件中的，不过它们会被赋予资源ID，这样我们就可以在程序中通过ID来访问它们。例如，假设在res/raw目录下有一个名称为filename的文件，并且它在编译的过程，被赋予的资源ID为R.raw.filename，那么就可以使用以下代码来访问它：Resources res = getResources(); InputStream is = res .openRawResource(R.raw.filename);</li>
+<li>values：这类资源以XML文件保存在res/values目录下，用来描述一些简单值，例如，数组、颜色、尺寸、字符串和样式值等，一般来说，这六种不同的值分别保存在名称为arrays.xml、colors.xml、dimens.xml、strings.xml和styles.xml文件中。</li>
+<li>xml：这类资源以XML文件保存在res/xml目录下，一般就是用来描述应用程序的配置信息。<br>R.java 文件<br>R.java 文件是自动生成的，如下：</li>
 </ul>
-<p><img src="/images/27.png"></p>
-<ol start="3">
+<p><img src="images/27.png" alt=""></p>
+<ol>
 <li>R.java文件路径如下：</li>
 </ol>
-<p><img src="/images/28.png"></p>
-<p>可以看出R.java文件里面拥有很多个静态内部类，比如layout，string等。每当有这种资源添加时，就在R.java文件中对应类型的静态内部类中添加一个public static final int 类型成员。<br>R.java文件里面的资源可以有两种方法引用：<br>（1）在java程序中引用资源按照java的语法来引用，R.resource_type.resource_ name，注意：resource_name不需要文件的后缀名，例如R.id.text_input_password_toggle、R.drawable.shadow_left。<br>（2）在XML文件中引用资源格式：@[package:] type&#x2F;name，如下图</p>
-<p><img src="/images/29.png"></p>
-<ol start="4">
+<p><img src="images/28.png" alt=""></p>
+<p>可以看出R.java文件里面拥有很多个静态内部类，比如layout，string等。每当有这种资源添加时，就在R.java文件中对应类型的静态内部类中添加一个public static final int 类型成员。<br>R.java文件里面的资源可以有两种方法引用：<br>（1）在java程序中引用资源按照java的语法来引用，R.resource_type.resource_ name，注意：resource_name不需要文件的后缀名，例如R.id.text_input_password_toggle、R.drawable.shadow_left。<br>（2）在XML文件中引用资源格式：@[package:] type/name，如下图</p>
+<p><img src="images/29.png" alt=""></p>
+<ol>
 <li>resources.arsc文件<br>resources.arsc这个文件记录了所有的应用程序资源目录的信息，包括每一个资源名称、类型、值、ID以及所配置的维度信息。我们可以将这个resources.arsc文件想象成是一个资源索引表，这个资源索引表在给定资源ID和设备配置信息的情况下，能够在应用程序的资源目录中快速地找到最匹配的资源。</li>
 </ol>
-<h3 id="2-aidl阶段"><a href="#2-aidl阶段" class="headerlink" title="2.aidl阶段"></a>2.aidl阶段</h3><p>这一过程中使用到的工具是aidl.exe，位于android-sdk&#x2F;platform-tools目录下。<br>AIDL (Android Interface Definition Language）， Android接口定义语言，Android提供的IPC （Inter Process Communication，进程间通信）的一种独特实现。<br>这个阶段处理.aidl文件，生成对应的.java文件。如果在项目没有使用到aidl文件，则可以跳过这一步。</p>
+<h3 id="2-aidl阶段"><a href="#2-aidl阶段" class="headerlink" title="2.aidl阶段"></a>2.aidl阶段</h3><p>这一过程中使用到的工具是aidl.exe，位于android-sdk/platform-tools目录下。<br>AIDL (Android Interface Definition Language）， Android接口定义语言，Android提供的IPC （Inter Process Communication，进程间通信）的一种独特实现。<br>这个阶段处理.aidl文件，生成对应的.java文件。如果在项目没有使用到aidl文件，则可以跳过这一步。</p>
 <h3 id="3-Java-Compiler阶段"><a href="#3-Java-Compiler阶段" class="headerlink" title="3. Java Compiler阶段"></a>3. Java Compiler阶段</h3><p>通过Java Compiler 编译项目中所有的Java代码，包括R.java、.aidl文件生成的.java文件、Java源文件，生成.class文件。</p>
-<h3 id="4-dex阶段"><a href="#4-dex阶段" class="headerlink" title="4.dex阶段"></a>4.dex阶段</h3><p>dx工具位于android-sdk&#x2F;platform-tools 目录下，通过它生成可供Android系统Dalvik虚拟机执行的classes.dex文件。在这个阶段任何第三方的libraries和.class文件都会被转换成.dex文件。<br>dx工具的主要工作是将Java字节码转成成Dalvik字节码、压缩常量池、消除冗余信息等。</p>
-<h3 id="5-apkBuilder阶段"><a href="#5-apkBuilder阶段" class="headerlink" title="5.apkBuilder阶段"></a>5.apkBuilder阶段</h3><p>打包的工具apkbuilder位于 android-sdk&#x2F;tools目录下。apkbuilder为一个脚本文件，实际调用的是android-sdk&#x2F;tools&#x2F;lib&#x2F;sdklib.jar文件中的com.android.sdklib.build.ApkbuilderMain类。</p>
-<p>所有没有编译的资源（如 res&#x2F;raw、images等）、Other Resources(assets文件)、编译过的资源 、.dex文件 、resources.arsc 和 AndroidManifest.xml 都会被apkbuilder工具打包到最终的.apk文件中。</p>
-<p><strong>注意：</strong><br>res&#x2F;raw和assets的相同点：两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制。<br>res&#x2F;raw和assets的不同点：<br>1.res&#x2F;raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要AssetManager类。<br>2.res&#x2F;raw不可以有目录结构，而assets则可以有目录结构，也就是assets目录下可以再建立文件夹</p>
+<h3 id="4-dex阶段"><a href="#4-dex阶段" class="headerlink" title="4.dex阶段"></a>4.dex阶段</h3><p>dx工具位于android-sdk/platform-tools 目录下，通过它生成可供Android系统Dalvik虚拟机执行的classes.dex文件。在这个阶段任何第三方的libraries和.class文件都会被转换成.dex文件。<br>dx工具的主要工作是将Java字节码转成成Dalvik字节码、压缩常量池、消除冗余信息等。</p>
+<h3 id="5-apkBuilder阶段"><a href="#5-apkBuilder阶段" class="headerlink" title="5.apkBuilder阶段"></a>5.apkBuilder阶段</h3><p>打包的工具apkbuilder位于 android-sdk/tools目录下。apkbuilder为一个脚本文件，实际调用的是android-sdk/tools/lib/sdklib.jar文件中的com.android.sdklib.build.ApkbuilderMain类。</p>
+<p>所有没有编译的资源（如 res/raw、images等）、Other Resources(assets文件)、编译过的资源 、.dex文件 、resources.arsc 和 AndroidManifest.xml 都会被apkbuilder工具打包到最终的.apk文件中。</p>
+<p><strong>注意：</strong><br>res/raw和assets的相同点：两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制。<br>res/raw和assets的不同点：<br>1.res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要AssetManager类。<br>2.res/raw不可以有目录结构，而assets则可以有目录结构，也就是assets目录下可以再建立文件夹</p>
 <h3 id="6-JarSigner阶段"><a href="#6-JarSigner阶段" class="headerlink" title="6. JarSigner阶段"></a>6. JarSigner阶段</h3><p>一旦apk文件生成，它必须被签名才能被安装在设备上。</p>
 <p>在开发过程中，主要用到的就是两种签名的keystore。一种是用于调试的debug.keystore，它主要用于调试。另一种就是用于发布正式版本的keystore。</p>
-<h3 id="7-zipAlign阶段"><a href="#7-zipAlign阶段" class="headerlink" title="7.zipAlign阶段"></a>7.zipAlign阶段</h3><p>如果你发布的apk是正式版的话，就必须对APK进行对齐处理，用到的工具是zipalign，它位于android-sdk&#x2F;tools目录下。</p>
+<h3 id="7-zipAlign阶段"><a href="#7-zipAlign阶段" class="headerlink" title="7.zipAlign阶段"></a>7.zipAlign阶段</h3><p>如果你发布的apk是正式版的话，就必须对APK进行对齐处理，用到的工具是zipalign，它位于android-sdk/tools目录下。</p>
 <p>Zipalign是一个android平台上整理APK文件的工具，它对apk中未压缩的数据进行4字节对齐，对齐的主要过程是将APK包中所有的资源文件距离文件起始偏移为4字节整数倍，对齐后就可以使用mmap函数读取文件，可以像读取内存一样对普通文件进行操作。如果没有4字节对齐，就必须显式的读取，这样比较缓慢并且会耗费额外的内存。</p>
 <p><strong>打包工具对应截图</strong>如下：</p>
-<p><img src="/images/30.png"></p>
+<p><img src="images/30.png" alt=""></p>
 <h2 id="APK安装过程"><a href="#APK安装过程" class="headerlink" title="APK安装过程"></a>APK安装过程</h2><p>Adroid的应用安装涉及到如下几个目录：</p>
 <ul>
-<li><p>&#x2F;data&#x2F;app：存放用户安装的APK的目录，安装时，把APK拷贝于此。</p>
+<li><p>/data/app：存放用户安装的APK的目录，安装时，把APK拷贝于此。</p>
 </li>
-<li><p>&#x2F;data&#x2F;data：应用安装完成后，在&#x2F;data&#x2F;data目录下自动生成和APK包名（packagename）一样的文件夹，用于存放应用程序的数据。</p>
+<li><p>/data/data：应用安装完成后，在/data/data目录下自动生成和APK包名（packagename）一样的文件夹，用于存放应用程序的数据。</p>
 </li>
-<li><p>&#x2F;data&#x2F;dalvik-cache：存放APK的odex文件，便于应用启动时直接执行。</p>
+<li><p>/data/dalvik-cache：存放APK的odex文件，便于应用启动时直接执行。</p>
 <p>具体安装过程如下：</p>
 </li>
 </ul>
 <ol>
-<li><p>复制APK安装包到&#x2F;data&#x2F;app下，然后校验APK的签名是否正确，检查APK的结构是否正常，进而解压并且校验APK中的dex文件。</p>
+<li><p>复制APK安装包到/data/app下，然后校验APK的签名是否正确，检查APK的结构是否正常，进而解压并且校验APK中的dex文件。</p>
 </li>
 <li><p>确定dex文件没有被损坏后，再把dex优化成odex，使得应用程序启动时间加快。</p>
 </li>
-<li><p>同时在&#x2F;data&#x2F;data目录下建立于APK包名相同的文件夹，如果APK中有lib库，系统会判断这些so库的名字，查看是否以lib开头，是否以.so结尾，再根据CPU的架构解压对应的so库到&#x2F;data&#x2F;data&#x2F;packagename&#x2F;lib下。</p>
+<li><p>同时在/data/data目录下建立于APK包名相同的文件夹，如果APK中有lib库，系统会判断这些so库的名字，查看是否以lib开头，是否以.so结尾，再根据CPU的架构解压对应的so库到/data/data/packagename/lib下。</p>
 <p>APK安装的时候会把DEX文件解压并且优化位odex，odex的格式如下图所示：</p>
-<p><img src="/images/31.png"></p>
 </li>
 </ol>
+<p>   <img src="images/31.png" alt=""></p>
 <p>如上图所示，odex在原来的dex文件头添加了一些数据，在文件尾部添加了程序运行时需要的依赖库和辅助数据，使得程序运行速度更快。</p>
 
     </div>
@@ -397,7 +400,10 @@
     <a href="/2022/10/26/%E7%BE%8E%E9%A3%9F%E5%81%9A%E6%B3%95/" rel="prev" title="美食做法">
       <i class="fa fa-chevron-left"></i> 美食做法
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/11/23/%E4%BD%B3%E8%82%B4%E4%B9%8B%E4%B8%80/" rel="next" title="佳肴之一">
+      佳肴之一 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -470,7 +476,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
